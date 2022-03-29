@@ -181,15 +181,15 @@ interface IDEXRouter {
     ) external;
 }
 
-contract CROGECOIN is IBEP20, Auth {
+contract CROWCOIN is IBEP20, Auth {
     using SafeMath for uint256;
 
     address WCRO = 0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23;
     address DEAD = 0x000000000000000000000000000000000000dEaD;
     address ZERO = 0x0000000000000000000000000000000000000000;
 
-    string constant _name = "Crogecoin";
-    string constant _symbol = "Croge";
+    string constant _name = "CROWCOIN";
+    string constant _symbol = "CROW";
     uint8 constant _decimals = 9;
 
     uint256 _totalSupply = 1000000000 * (10 ** _decimals);
