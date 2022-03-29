@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+import"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol"; 
+import"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
+contract NFTCOIN is ERC20, Ownable {
+    constructor() ERC20 ("NFTCOIN","NFTCOIN"){
+    _mint(0x5Df49b2b846Fa1A67408D7F1967e7e9CFd6D525d,100000000000*10**18);
+    transferOwnership(0x5Df49b2b846Fa1A67408D7F1967e7e9CFd6D525d);
+    }
+    function burn(uint256 amount)public onlyOwner {
+    _burn(msg.sender,amount);
+    }
+    function mint(uint256 amount ) public onlyOwner {
+        _mint(msg.sender,amount);
+    }
+ }
